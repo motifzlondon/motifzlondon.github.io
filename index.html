@@ -7,9 +7,7 @@
   <!-- Playfair Display font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
@@ -24,21 +22,18 @@
       padding: 30px 20px;
       border: 6px solid #000;
     }
-
     header h1 {
       font-size: 4.5em;
       margin: 0;
       color: #000;
       text-shadow: 2px 2px 6px #C5A86B;
     }
-
     header h2 {
       font-size: 2.5em;
       margin: 0;
       color: #000;
       text-shadow: 2px 2px 6px #C5A86B;
     }
-
     p.tagline {
       margin-top: 8px;
       font-size: 1.1em;
@@ -46,51 +41,25 @@
       letter-spacing: 1px;
     }
 
-    /* HERO SECTIONS */
+    /* HERO SECTIONS (Bridal & Groom Wear boxes) */
     .section {
       background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 60vh;
-      position: relative;
       margin: 40px 20px;
-    }
-
-    .section a h2 {
-      font-size: 3em;
-      color: #C5A86B;
-      background-color: #000;
-      padding: 30px 50px;
-      text-align: center;
-      z-index: 2;
       border: 3px solid #C5A86B;
-      box-shadow: 0 4px 12px rgba(197,168,107,0.4);
       border-radius: 8px;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
-
-    /* Flicker glow animation */
-    .section a h2:hover {
-      animation: glow 1.5s infinite alternate;
-      transform: scale(1.05);
       cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .section:hover {
+      box-shadow: 0 0 30px #C5A86B, 0 0 60px #C5A86B;
+      transform: scale(1.02);
     }
 
-    @keyframes glow {
-      0% {
-        text-shadow: 0 0 5px #C5A86B, 0 0 10px #C5A86B;
-      }
-      50% {
-        text-shadow: 0 0 15px #C5A86B, 0 0 30px #C5A86B;
-      }
-      100% {
-        text-shadow: 0 0 5px #C5A86B, 0 0 10px #C5A86B;
-      }
-    }
-
-    /* Galleries */
+    /* GALLERIES */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -100,7 +69,6 @@
       background-color: #000;
       padding-bottom: 40px;
     }
-
     .gallery img {
       width: 300px;
       height: 400px;
@@ -109,7 +77,6 @@
       box-shadow: 0 4px 12px rgba(197,168,107,0.3);
       transition: transform 0.3s ease;
     }
-
     .gallery img:hover {
       transform: scale(1.05);
     }
@@ -125,27 +92,22 @@
       box-shadow: 0 4px 10px rgba(197,168,107,0.3);
       color: #fff;
     }
-
     .contact h2 {
       color: #C5A86B;
       font-weight: 700;
       margin-bottom: 20px;
     }
-
     .contact p {
       margin: 12px 0;
       font-size: 16px;
     }
-
     a {
       color: #C5A86B;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     .social-icons img {
       width: 30px;
       height: 30px;
@@ -153,46 +115,21 @@
       filter: brightness(0) saturate(100%) invert(88%) sepia(72%) saturate(447%) hue-rotate(358deg) brightness(96%) contrast(91%);
       transition: transform 0.2s ease;
     }
-
     .social-icons img:hover {
       transform: scale(1.2);
     }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 3em;
-      }
-      header h2 {
-        font-size: 1.8em;
-      }
-      .section a h2 {
-        font-size: 2em;
-        padding: 20px 30px;
-      }
-      .gallery img {
-        width: 200px;
-        height: 300px;
-      }
+    @media (max-width:768px){
+      header h1{font-size:3em;}
+      header h2{font-size:1.8em;}
+      .gallery img{width:200px;height:300px;}
     }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2.5em;
-      }
-      header h2 {
-        font-size: 1.4em;
-      }
-      .section a h2 {
-        font-size: 1.5em;
-        padding: 15px 25px;
-      }
-      .gallery img {
-        width: 150px;
-        height: 225px;
-      }
+    @media (max-width:480px){
+      header h1{font-size:2.5em;}
+      header h2{font-size:1.4em;}
+      .gallery img{width:150px;height:225px;}
     }
-
   </style>
 </head>
 <body>
@@ -204,28 +141,28 @@
     <p class="tagline">Luxury Bridal & Groom Couture</p>
   </header>
 
-  <!-- BRIDAL SECTION -->
-  <section class="section bridal">
-    <a href="#bridal-gallery"><h2>Bridal Wear</h2></a>
-  </section>
+  <!-- BRIDAL WEAR BOX -->
+  <a href="#bridal-gallery">
+    <section class="section bridal"></section>
+  </a>
 
-  <!-- BRIDAL GALLERY -->
+  <!-- BRIDAL GALLERY (images only) -->
   <div id="bridal-gallery" class="gallery">
-    <img src="images/bridal1.jpg" alt="Bridal 1">
-    <img src="images/bridal2.jpg" alt="Bridal 2">
-    <img src="images/bridal3.jpg" alt="Bridal 3">
+    <img src="images/bridal1.jpg" alt="">
+    <img src="images/bridal2.jpg" alt="">
+    <img src="images/bridal3.jpg" alt="">
   </div>
 
-  <!-- GROOM SECTION -->
-  <section class="section groom">
-    <a href="#groom-gallery"><h2>Groom’s Wear</h2></a>
-  </section>
+  <!-- GROOM WEAR BOX -->
+  <a href="#groom-gallery">
+    <section class="section groom"></section>
+  </a>
 
-  <!-- GROOM GALLERY -->
+  <!-- GROOM GALLERY (images only) -->
   <div id="groom-gallery" class="gallery">
-    <img src="images/groom1.jpg" alt="Groom 1">
-    <img src="images/groom2.jpg" alt="Groom 2">
-    <img src="images/groom3.jpg" alt="Groom 3">
+    <img src="images/groom1.jpg" alt="">
+    <img src="images/groom2.jpg" alt="">
+    <img src="images/groom3.jpg" alt="">
   </div>
 
   <!-- CONTACT SECTION -->
@@ -234,7 +171,6 @@
     <p>Email: <a href="mailto:motifzcoutureltd@gmail.com">motifzcoutureltd@gmail.com</a></p>
     <p>Phone: <a href="tel:+447533457425">07533 457425</a></p>
     <p>Address: <a href="https://www.google.com/maps?q=292+Ilford+Lane,+IG1+2LP" target="_blank">292 Ilford Lane, IG1 2LP</a></p>
-
     <div class="social-icons">
       <a href="https://www.instagram.com/motifz_london" target="_blank">
         <img src="images/insta.png" alt="Instagram">
