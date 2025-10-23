@@ -14,24 +14,32 @@
       text-align: center;
     }
 
+    /* Header */
     header {
-      background-color: #000;
+      background-color: #fff; /* white background */
       padding: 50px 20px;
       border-bottom: 2px solid #d4af37;
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 4em; /* large "Motifz" */
+      margin: 0;
+      color: #d4af37; /* gold */
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    header h2 {
+      font-size: 1.8em; /* smaller "London" below */
       margin: 0;
       color: #d4af37;
       font-weight: 700;
-      letter-spacing: 2px;
     }
 
     p.tagline {
       margin-top: 10px;
       font-size: 1.1em;
-      color: #fff;
+      color: #000; /* tagline text in black on white background */
       letter-spacing: 1px;
     }
 
@@ -66,12 +74,13 @@
       text-shadow: 0 0 10px rgba(0,0,0,0.6);
     }
 
-    .groom {
-      background-image: url('images/groom.jpg');
-    }
-
+    /* Bridal & Groom background images */
     .bridal {
       background-image: url('images/bridal.jpg');
+    }
+
+    .groom {
+      background-image: url('images/groom.jpg');
     }
 
     /* Image Galleries */
@@ -142,36 +151,38 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>Motifz London</h1>
+    <h1>Motifz</h1>
+    <h2>London</h2>
     <p class="tagline">Luxury Pakistani Bridal & Groom's Wear</p>
   </header>
 
-  <!-- Groom Hero Section -->
-  <section class="section groom">
-    <h2>Groom’s Wear</h2>
-  </section>
-
-  <!-- Groom Gallery -->
-  <div class="gallery">
-    <img src="images/groom1.jpg" alt="Groom 1">
-    <img src="images/groom2.jpg" alt="Groom 2">
-    <img src="images/groom3.jpg" alt="Groom 3">
-  </div>
-
-  <!-- Bridal Hero Section -->
+  <!-- BRIDAL HERO SECTION -->
   <section class="section bridal">
     <h2>Bridal Wear</h2>
   </section>
 
-  <!-- Bridal Gallery -->
+  <!-- BRIDAL GALLERY -->
   <div class="gallery">
     <img src="images/bridal1.jpg" alt="Bridal 1">
     <img src="images/bridal2.jpg" alt="Bridal 2">
     <img src="images/bridal3.jpg" alt="Bridal 3">
   </div>
 
-  <!-- Contact Section -->
+  <!-- GROOM HERO SECTION -->
+  <section class="section groom">
+    <h2>Groom’s Wear</h2>
+  </section>
+
+  <!-- GROOM GALLERY -->
+  <div class="gallery">
+    <img src="images/groom1.jpg" alt="Groom 1">
+    <img src="images/groom2.jpg" alt="Groom 2">
+    <img src="images/groom3.jpg" alt="Groom 3">
+  </div>
+
+  <!-- CONTACT SECTION -->
   <section class="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:motifzcoutureltd@gmail.com">motifzcoutureltd@gmail.com</a></p>
