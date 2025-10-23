@@ -4,86 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motifz London</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Luxury font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Playfair Display', serif;
       background-color: #000;
       color: #fff;
       text-align: center;
     }
 
-    /* Header */
+    /* HEADER */
     header {
-      background-color: #fff; /* white background */
-      padding: 50px 20px;
-      border-bottom: 2px solid #d4af37;
+      background-color: #d4af37; /* gold background */
+      padding: 60px 20px;
+      border-bottom: 2px solid #000;
     }
 
     header h1 {
-      font-size: 4em; /* large "Motifz" */
+      font-size: 4em;
       margin: 0;
-      color: #d4af37; /* gold */
-      font-weight: 700;
-      letter-spacing: 2px;
+      color: #000; /* black text */
     }
 
     header h2 {
-      font-size: 1.8em; /* smaller "London" below */
+      font-size: 2em;
       margin: 0;
-      color: #d4af37;
-      font-weight: 700;
+      color: #000;
     }
 
     p.tagline {
       margin-top: 10px;
-      font-size: 1.1em;
-      color: #000; /* tagline text in black on white background */
+      font-size: 1.2em;
+      color: #000;
       letter-spacing: 1px;
     }
 
-    /* Hero Sections */
+    /* HERO SECTIONS */
     .section {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      height: 60vh;
+      background-color: #fff; /* white background */
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-    }
-
-    .section::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      height: 60vh;
+      position: relative;
+      margin: 40px 20px;
     }
 
     .section h2 {
-      position: relative;
-      font-size: 2.5em;
-      color: #d4af37;
-      font-weight: 700;
+      font-size: 3em;
+      color: #d4af37; /* gold text */
+      padding: 30px 50px;
+      border: 3px solid #d4af37; /* gold border */
+      text-align: center;
       z-index: 2;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.6);
     }
 
-    /* Bridal & Groom background images */
-    .bridal {
-      background-image: url('images/bridal.jpg');
-    }
-
-    .groom {
-      background-image: url('images/groom.jpg');
-    }
-
-    /* Image Galleries */
+    /* Galleries */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -105,7 +83,7 @@
       transform: scale(1.05);
     }
 
-    /* Contact Section */
+    /* CONTACT SECTION */
     .contact {
       background-color: #111;
       margin: 40px auto;
@@ -158,7 +136,7 @@
     <p class="tagline">Luxury Pakistani Bridal & Groom's Wear</p>
   </header>
 
-  <!-- BRIDAL HERO SECTION -->
+  <!-- BRIDAL SECTION -->
   <section class="section bridal">
     <h2>Bridal Wear</h2>
   </section>
@@ -170,7 +148,7 @@
     <img src="images/bridal3.jpg" alt="Bridal 3">
   </div>
 
-  <!-- GROOM HERO SECTION -->
+  <!-- GROOM SECTION -->
   <section class="section groom">
     <h2>Groom’s Wear</h2>
   </section>
