@@ -4,36 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motifz London</title>
-  <!-- Luxury font -->
+  <!-- Playfair Display font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background-color: #000; /* page background black */
+      background-color: #000;
       color: #fff;
       text-align: center;
     }
 
     /* HEADER */
     header {
-      background-color: #d4af37; /* gold background */
+      background-color: #C5A86B;
       padding: 30px 20px;
-      border: 6px solid #000; /* thick black border */
+      border: 6px solid #000;
     }
 
     header h1 {
-      font-size: 4.5em; /* make Motifz bigger */
+      font-size: 4.5em;
       margin: 0;
-      color: #000; /* black text */
-      text-shadow: 2px 2px 6px #d4af37; /* gold shadow effect */
+      color: #000;
+      text-shadow: 2px 2px 6px #C5A86B;
     }
 
     header h2 {
-      font-size: 2.5em; /* London slightly smaller */
+      font-size: 2.5em;
       margin: 0;
       color: #000;
-      text-shadow: 2px 2px 6px #d4af37; /* gold shadow effect */
+      text-shadow: 2px 2px 6px #C5A86B;
     }
 
     p.tagline {
@@ -45,7 +48,7 @@
 
     /* HERO SECTIONS */
     .section {
-      background-color: #000; /* black background for sections */
+      background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,17 +57,37 @@
       margin: 40px 20px;
     }
 
-    /* Black box with gold outline and shadow */
-    .section h2 {
+    .section a h2 {
       font-size: 3em;
-      color: #d4af37; /* gold text */
-      background-color: #000; /* black box */
+      color: #C5A86B;
+      background-color: #000;
       padding: 30px 50px;
       text-align: center;
       z-index: 2;
-      border: 3px solid #d4af37; /* gold outline */
-      box-shadow: 0 4px 12px rgba(212,175,55,0.4); /* subtle shadow */
+      border: 3px solid #C5A86B;
+      box-shadow: 0 4px 12px rgba(197,168,107,0.4);
       border-radius: 8px;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    /* Flicker glow animation */
+    .section a h2:hover {
+      animation: glow 1.5s infinite alternate;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #C5A86B, 0 0 10px #C5A86B;
+      }
+      50% {
+        text-shadow: 0 0 15px #C5A86B, 0 0 30px #C5A86B;
+      }
+      100% {
+        text-shadow: 0 0 5px #C5A86B, 0 0 10px #C5A86B;
+      }
     }
 
     /* Galleries */
@@ -74,7 +97,7 @@
       justify-content: center;
       margin: 40px 0;
       gap: 20px;
-      background-color: #000; /* galleries on black background */
+      background-color: #000;
       padding-bottom: 40px;
     }
 
@@ -83,7 +106,7 @@
       height: 400px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+      box-shadow: 0 4px 12px rgba(197,168,107,0.3);
       transition: transform 0.3s ease;
     }
 
@@ -99,12 +122,12 @@
       border-radius: 10px;
       width: 90%;
       max-width: 500px;
-      box-shadow: 0 4px 10px rgba(212,175,55,0.3);
+      box-shadow: 0 4px 10px rgba(197,168,107,0.3);
       color: #fff;
     }
 
     .contact h2 {
-      color: #d4af37;
+      color: #C5A86B;
       font-weight: 700;
       margin-bottom: 20px;
     }
@@ -115,7 +138,7 @@
     }
 
     a {
-      color: #d4af37;
+      color: #C5A86B;
       text-decoration: none;
     }
 
@@ -134,6 +157,42 @@
     .social-icons img:hover {
       transform: scale(1.2);
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3em;
+      }
+      header h2 {
+        font-size: 1.8em;
+      }
+      .section a h2 {
+        font-size: 2em;
+        padding: 20px 30px;
+      }
+      .gallery img {
+        width: 200px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      header h2 {
+        font-size: 1.4em;
+      }
+      .section a h2 {
+        font-size: 1.5em;
+        padding: 15px 25px;
+      }
+      .gallery img {
+        width: 150px;
+        height: 225px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -147,11 +206,11 @@
 
   <!-- BRIDAL SECTION -->
   <section class="section bridal">
-    <h2>Bridal Wear</h2>
+    <a href="#bridal-gallery"><h2>Bridal Wear</h2></a>
   </section>
 
   <!-- BRIDAL GALLERY -->
-  <div class="gallery">
+  <div id="bridal-gallery" class="gallery">
     <img src="images/bridal1.jpg" alt="Bridal 1">
     <img src="images/bridal2.jpg" alt="Bridal 2">
     <img src="images/bridal3.jpg" alt="Bridal 3">
@@ -159,11 +218,11 @@
 
   <!-- GROOM SECTION -->
   <section class="section groom">
-    <h2>Groom’s Wear</h2>
+    <a href="#groom-gallery"><h2>Groom’s Wear</h2></a>
   </section>
 
   <!-- GROOM GALLERY -->
-  <div class="gallery">
+  <div id="groom-gallery" class="gallery">
     <img src="images/groom1.jpg" alt="Groom 1">
     <img src="images/groom2.jpg" alt="Groom 2">
     <img src="images/groom3.jpg" alt="Groom 3">
