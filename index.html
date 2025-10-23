@@ -10,22 +10,22 @@
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #fff; /* everything below header is white */
+      color: #000;
       text-align: center;
     }
 
     /* HEADER */
     header {
       background-color: #d4af37; /* gold background */
-      padding: 40px 20px; /* slightly smaller than before */
+      padding: 40px 20px;
       border-bottom: 2px solid #000;
     }
 
     header h1 {
       font-size: 3.5em; /* large "Motifz" */
       margin: 0;
-      color: #000;
+      color: #000; /* black text */
     }
 
     header h2 {
@@ -43,7 +43,7 @@
 
     /* HERO SECTIONS */
     .section {
-      background-color: #fff;
+      background-color: #fff; /* full white background */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -52,15 +52,16 @@
       margin: 40px 20px;
     }
 
-    /* Gold-outlined text box */
+    /* Gold-outlined text box with shadow */
     .section h2 {
       font-size: 3em;
-      color: #d4af37;
+      color: #d4af37; /* gold text */
       padding: 30px 50px;
-      border: 3px solid #d4af37;
+      border: 3px solid #d4af37; /* gold border */
       text-align: center;
       z-index: 2;
-      background-color: #fff;
+      background-color: #fff; /* box matches section background */
+      box-shadow: 0 4px 10px rgba(212,175,55,0.3);
     }
 
     /* Galleries */
@@ -70,6 +71,8 @@
       justify-content: center;
       margin: 40px 0;
       gap: 20px;
+      background-color: #fff; /* keep galleries on white background */
+      padding-bottom: 40px;
     }
 
     .gallery img {
@@ -94,6 +97,7 @@
       width: 90%;
       max-width: 500px;
       box-shadow: 0 4px 10px rgba(212,175,55,0.3);
+      color: #fff;
     }
 
     .contact h2 {
