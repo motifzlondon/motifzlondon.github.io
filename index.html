@@ -1,115 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motifz London</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #111;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motifz London</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
 
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 25px 0;
-        }
+    header {
+      background-color: #000;
+      padding: 50px 20px;
+      border-bottom: 2px solid #d4af37;
+    }
 
-        header h1 {
-            margin: 0;
-            font-weight: 700;
-            font-size: 2.5em;
-            letter-spacing: 2px;
-        }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #d4af37;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-        header p {
-            margin-top: 5px;
-            font-weight: 400;
-            font-size: 1.1em;
-            color: #d4af37; /* subtle gold */
-        }
+    p.tagline {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #fff;
+      letter-spacing: 1px;
+    }
 
-        .contact {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 20px;
-            margin: 40px auto;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
+    /* Hero Sections */
+    .section {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
 
-        .contact h2 {
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #d4af37; /* subtle gold */
-        }
+    .section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
 
-        .contact p {
-            margin: 12px 0;
-            font-size: 16px;
-        }
+    .section h2 {
+      position: relative;
+      font-size: 2.5em;
+      color: #d4af37;
+      font-weight: 700;
+      z-index: 2;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
 
-        .social-icons {
-            margin-top: 20px;
-        }
+    .groom {
+      background-image: url('images/groom.jpg');
+    }
 
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-        }
+    .bridal {
+      background-image: url('images/bridal.jpg');
+    }
 
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            vertical-align: middle;
-            filter: brightness(0) invert(1); /* make icons white by default */
-            transition: filter 0.3s;
-        }
+    /* Image Galleries */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 20px;
+    }
 
-        .social-icons img:hover {
-            filter: brightness(0) invert(0.7) sepia(1) hue-rotate(40deg) saturate(5); /* subtle gold on hover */
-        }
+    .gallery img {
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+      transition: transform 0.3s ease;
+    }
 
-        a {
-            color: #d4af37; /* gold links */
-            text-decoration: none;
-        }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* Contact Section */
+    .contact {
+      background-color: #111;
+      margin: 40px auto;
+      padding: 30px 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(212,175,55,0.3);
+    }
+
+    .contact h2 {
+      color: #d4af37;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      filter: brightness(0) saturate(100%) invert(88%) sepia(72%) saturate(447%) hue-rotate(358deg) brightness(96%) contrast(91%);
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Motifz London</h1>
-        <p>Luxury Pakistani Bridal & Groom's Wear</p>
-    </header>
+  <header>
+    <h1>Motifz London</h1>
+    <p class="tagline">Luxury Pakistani Bridal & Groom's Wear</p>
+  </header>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:motifzcoutureltd@gmail.com">motifzcoutureltd@gmail.com</a></p>
-        <p>Phone: <a href="tel:+447533457425">07533 457425</a></p>
-        <p>Address: 292 Ilford Lane, IG1 2LP</p>
+  <!-- Groom Hero Section -->
+  <section class="section groom">
+    <h2>Groom’s Wear</h2>
+  </section>
 
-        <div class="social-icons">
-            <a href="https://www.instagram.com/motifz_london" target="_blank">
-                <img src="images/insta.png" alt="Instagram">
-            </a>
-            <a href="https://www.tiktok.com/@motifz_london" target="_blank">
-                <img src="images/tiktok.png" alt="TikTok">
-            </a>
-        </div>
-    </section>
+  <!-- Groom Gallery -->
+  <div class="gallery">
+    <img src="images/groom1.jpg" alt="Groom 1">
+    <img src="images/groom2.jpg" alt="Groom 2">
+    <img src="images/groom3.jpg" alt="Groom 3">
+  </div>
+
+  <!-- Bridal Hero Section -->
+  <section class="section bridal">
+    <h2>Bridal Wear</h2>
+  </section>
+
+  <!-- Bridal Gallery -->
+  <div class="gallery">
+    <img src="images/bridal1.jpg" alt="Bridal 1">
+    <img src="images/bridal2.jpg" alt="Bridal 2">
+    <img src="images/bridal3.jpg" alt="Bridal 3">
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:motifzcoutureltd@gmail.com">motifzcoutureltd@gmail.com</a></p>
+    <p>Phone: <a href="tel:+447533457425">07533 457425</a></p>
+    <p>Address: <a href="https://www.google.com/maps?q=292+Ilford+Lane,+IG1+2LP" target="_blank">292 Ilford Lane, IG1 2LP</a></p>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/motifz_london" target="_blank">
+        <img src="images/insta.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@motifz_london" target="_blank">
+        <img src="images/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+  </section>
 
 </body>
 </html>
